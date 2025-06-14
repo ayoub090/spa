@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élégance Capillaire - Salon de coiffure pour femmes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../static/images/backgrounds/background.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        .booking-form {
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="sticky-nav bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fas fa-scissors text-pink-500 text-2xl mr-2"></i>
+                    <span class="title-font text-xl font-bold text-gray-800"> FEZ Élégance</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#accueil" class="text-gray-800 hover:text-pink-500">Accueil</a>
+                    <a href="#services" class="text-gray-800 hover:text-pink-500">Services</a>
+                    <a href="#promotions" class="text-gray-800 hover:text-pink-500">Promotions</a>
+                    <a href="#equipe" class="text-gray-800 hover:text-pink-500">Notre Équipe</a>
+                    <a href="#contact" class="text-gray-800 hover:text-pink-500">Contact</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="title-font text-4xl md:text-6xl font-bold mb-6">Votre Beauté, Notre Passion</h1>
+            <p class="text-xl md:text-2xl mb-8">Découvrez l'art de la coiffure dans un cadre élégant et raffiné</p>
+            <a href="#reservation" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">Prendre rendez-vous</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="title-font text-3xl md:text-4xl font-bold text-center text-gray-800 mb-16">Nos Prestations</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80');"></div>
+                    <div class="p-6">
+                        <h3 class="title-font text-xl font-bold text-gray-800 mb-2">Coupe & Styling</h3>
+                        <p class="text-gray-600 mb-4">Des coupes modernes et adaptées à votre visage, accompagnées d'un brushing parfait.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-pink-500">À partir de 45€</span>
+                            <a href="#reservation" class="text-sm bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-full transition duration-300">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80');"></div>
+                    <div class="p-6">
+                        <h3 class="title-font text-xl font-bold text-gray-800 mb-2">Coloration Expert</h3>
+                        <p class="text-gray-600 mb-4">Des colorations personnalisées avec des produits haut de gamme pour un résultat éclatant.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-pink-500">À partir de 65€</span>
+                            <a href="#reservation" class="text-sm bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-full transition duration-300">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');"></div>
+                    <div class="p-6">
+                        <h3 class="title-font text-xl font-bold text-gray-800 mb-2">Soins Capillaires</h3>
+                        <p class="text-gray-600 mb-4">Des soins professionnels pour redonner vie à vos cheveux fatigués ou abîmés.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-pink-500">À partir de 55€</span>
+                            <a href="#reservation" class="text-sm bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-full transition duration-300">Réserver</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-pink-500 text-pink-500 hover:bg-pink-500 hover:text-white font-bold py-3 px-8 rounded-full transition duration-300">Voir tous nos services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section id="promotions" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="title-font text-3xl md:text-4xl font-bold text-center text-gray-800 mb-16">Nos Offres Spéciales</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Promotion 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-cover bg-center h-48 md:h-auto" style="background-image: url('https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80');"></div>
+                        <div class="p-6 md:w-2/3">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="title-font text-xl font-bold text-gray-800 mb-2">Première Visite</h3>
+                                    <p class="text-gray-600 mb-4">Profitez de -20% sur votre première prestation dans notre salon.</p>
+                                </div>
+                                <span class="bg-pink-500 text-white text-sm font-bold py-1 px-3 rounded-full">-20%</span>
+                            </div>
+                            <div class="text-sm text-gray-500 mb-4">Valable jusqu'au 30/12/2023</div>
+                            <a href="#reservation" class="text-sm bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-full transition duration-300">Profiter de l'offre</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Promotion 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-cover bg-center h-48 md:h-auto" style="background-image: url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80');"></div>
+                        <div class="p-6 md:w-2/3">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="title-font text-xl font-bold text-gray-800 mb-2">Duo Mère & Fille</h3>
+                                    <p class="text-gray-600 mb-4">Prestation identique pour 2 personnes à prix réduit.</p>
+                                </div>
+                                <span class="bg-pink-500 text-white text-sm font-bold py-1 px-3 rounded-full">-30%</span>
+                            </div>
+                            <div class="text-sm text-gray-500 mb-4">Valable jusqu'au 30/12/2023</div>
+                            <a href="#reservation" class="text-sm bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-full transition duration-300">Profiter de l'offre</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipe" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="title-font text-3xl md:text-4xl font-bold text-center text-gray-800 mb-16">Notre Équipe d'Experts</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Team Member 1 -->
+                <div class="text-center">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-pink-200 mb-6">
+                        <img src="../static/images/team_members/ayoub.jpeg" alt="Sophie" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="title-font text-xl font-bold text-gray-800 mb-2">ayoub</h3>
+                    <p class="text-pink-500 mb-4">Coiffeur Coloriste</p>
+                    <p class="text-gray-600">Spécialiste des colorations et balayages depuis 15 ans, Sophie saura vous conseiller pour sublimer votre chevelure.</p>
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <a href="#" class="text-gray-500 hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-pink-500"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="text-center">
+                    <div class="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-pink-200 mb-6">
+                        <img src="../static/images/team_members/yassmine.jpeg" alt="Claire" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="title-font text-xl font-bold text-gray-800 mb-2">yassmine</h3>
+                    <p class="text-pink-500 mb-4">Styliste Capillaire</p>
+                    <p class="text-gray-600">Passionnée par les coupes tendances, Claire crée des looks uniques qui mettent en valeur votre personnalité.</p>
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <a href="#" class="text-gray-500 hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-pink-500"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="title-font text-3xl md:text-4xl font-bold text-center text-gray-800 mb-16">Ce Que Disent Nos ClientEs</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"J'ai enfin trouvé mon salon de coiffure! Sophie a réalisé une magnifique balayage qui met parfaitement en valeur mon visage. Je recommande vivement!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Marie" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Marie D.</h4>
+                            <p class="text-sm text-gray-500">Client depuis 2 ans</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"L'accueil est toujours chaleureux et les conseils professionnels. Mon brushing tient parfaitement toute la journée. Un vrai plaisir de s'y rendre!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sarah" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Sarah L.</h4>
+                            <p class="text-sm text-gray-500">Client depuis 1 an</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Les soins capillaires d'Amélie ont sauvé mes cheveux abîmés. Après seulement 3 séances, ils ont retrouvé brillance et souplesse. Merci!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Julie" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Julie T.</h4>
+                            <p class="text-sm text-gray-500">Nouvelle cliente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="reservation" class="booking-form py-16">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-cover bg-center hidden md:block" style="background-image: url('https://images.unsplash.com/photo-1595475884564-7a6c2113fa3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); min-height: 500px;"></div>
+                    
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h2 class="title-font text-3xl font-bold text-gray-800 mb-6">Réservez Votre Créneau</h2>
+                        <p class="text-gray-600 mb-8">Remplissez ce formulaire pour prendre rendez-vous. Nous vous contacterons pour confirmer votre réservation.</p>
+                        
+                        <form class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nom Complet</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Téléphone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            
+                            <div>
+                                <label for="service" class="block text-gray-700 font-medium mb-2">Service</label>
+                                <select id="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                                    <option value="">Sélectionnez un service</option>
+                                    <option value="coupe">Coupe & Styling</option>
+                                    <option value="coloration">Coloration Expert</option>
+                                    <option value="soins">Soins Capillaires</option>
+                                    <option value="brushing">Brushing Professionnel</option>
+                                    <option value="mariage">Coiffure Mariage</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="date" class="block text-gray-700 font-medium mb-2">Date souhaitée</label>
+                                <input type="date" id="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message (optionnel)</label>
+                                <textarea id="message" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Envoyer la demande</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="title-font text-3xl md:text-4xl font-bold text-center text-gray-800 mb-16">Nous Trouver</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="title-font text-2xl font-bold text-gray-800 mb-6">Coordonnées</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-pink-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Adresse</h4>
+                                <p class="text-gray-600">12 Rue de la Beauté, 75008 Paris</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-pink-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Téléphone</h4>
+                                <p class="text-gray-600">01 23 45 67 89</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-pink-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                <p class="text-gray-600">contact@elegance-capillaire.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-pink-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-pink-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Horaires</h4>
+                                <p class="text-gray-600 mb-1">Lundi - Vendredi: 9h - 19h</p>
+                                <p class="text-gray-600">Samedi: 9h - 17h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-gray-800 mb-4">Suivez-nous</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-100 hover:bg-pink-500 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-pink-500 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 hover:bg-pink-500 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="h-full rounded-xl overflow-hidden shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13228.11801040601!2d-5.023569799999996!3d34.017453650000036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8b052bf15d53%3A0x316bdcc53ed93e08!2sAutoCentro!5e0!3m2!1sfr!2sma!4v1749920344431!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-pink-50">
+        <div class="container mx-auto px-6 max-w-4xl text-center">
+            <h2 class="title-font text-3xl font-bold text-gray-800 mb-4">Restez Informées</h2>
+            <p class="text-gray-600 mb-8">Abonnez-vous à notre newsletter pour recevoir nos dernières offres et conseils beauté.</p>
+            
+            <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input type="email" placeholder="Votre email" class="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">S'abonner</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-scissors text-pink-500 text-2xl mr-2"></i>
+                        <span class="title-font text-xl font-bold">Élégance Capillaire</span>
+                    </div>
+                    <p class="text-gray-400">Votre salon de coiffure haut de gamme à Paris, dédié à sublimer la beauté féminine.</p>
+                </div>
+                
+                <div>
+                    <h4 class="title-font text-lg font-bold mb-4">Liens Rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#accueil" class="text-gray-400 hover:text-pink-500 transition duration-300">Accueil</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-pink-500 transition duration-300">Services</a></li>
+                        <li><a href="#promotions" class="text-gray-400 hover:text-pink-500 transition duration-300">Promotions</a></li>
+                        <li><a href="#equipe" class="text-gray-400 hover:text-pink-500 transition duration-300">Notre Équipe</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-pink-500 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="title-font text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300">Coupes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300">Colorations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300">Soins</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300">Brushing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300">Coiffures Mariage</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="title-font text-lg font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-pink-500"></i> 12 Rue de la Beauté, 75008 Paris</li>
+                        <li class="flex items-center"><i class="fas fa-phone-alt mr-2 text-pink-500"></i> 01 23 45 67 89</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-2 text-pink-500"></i> contact@elegance-capillaire.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Élégance Capillaire. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-pink-500"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-pink-500"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-pink-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Mobile Menu Toggle (would need more JS for functionality)
+        // Form submission handling (would need backend integration)
+    </script>
+</body>
+</html>
